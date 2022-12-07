@@ -1,2 +1,2 @@
 # o_poder_do_js
-Curso: O poder do Javascript, ministrado pelo Matheus SIlva, programação feita com, Typescript, NodeJS, express, MongoDB.
+Curso: O poder do Javascript, ministrado pelo Matheus SIlva, programação feita com, Typescript, NodeJS, express, MongoDB com Docker.
