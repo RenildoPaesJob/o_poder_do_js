@@ -1,0 +1,59 @@
+>> node -v
+>> npm --version
+>> npm i -g yarn
+>> yarn add -D typescript
+>> yarn tsc
+## para fazer o comand a seguir tem que configurar o package.json
+scripts: {
+  "build" : "tsc"
+}
+>> yarn build
+# para testar o codigo:
+>> node dist/index
+
+# config para a escrita do codigo
+>> npm init @eslint/config
+
+# p add o express NAO PODE SER uma dependecia de desenvolvimento
+>> yarn add express
+
+# p corrigir o error de importação
+>> yarn add -D @types/express
+
+==> APOS TODA ESSA CONFIGURAÇÃO <==
+################################################################
+
+-> Para subir o server:
+>> yarn build
+
+-> Rodar com o node
+>> node dist
+
+** PARA FACILITAR, INSTALE:
+>> yarn add -D ts-node
+>> yarn ts-node src/index.ts
+** OU
+>> yarn add -D nodemon
+
+-> para rodar o servidor
+-- tem que configurar um script
+scripts: {
+	"dev": "nodemon src/index.ts"
+}
+-->para rodar na linha de comando
+>>yarn dev
+!ATENÇÃO! so pode rodar desta forma com o TS-NODE instalado!
+
+# O DB é o mongoDB e pra rodar via docker
+--> para instalar:
+>> docker run --name mongo -p 27017:27017 -d mongo
+
+--> para verificar se estar rodando:
+>> docker ps
+
+--> para a manipulação do bando de dados:
+>> yarn add mongoose
+
+--> para ler files
+>> yarn add multer
+>> yarn add -D @types/multer
