@@ -1,0 +1,17 @@
+======== iniciando =========
+yarn create vite
+
+======== instalando =========
+yarn vite
+
+======== setup =========
+.editorconfig
+
+======== eslint =========
+npm init @eslint/config
+
+======== style-components =========
+yarn add styled-components
+
+--> types do styled-components
+yarn add -D @types/styled-components
