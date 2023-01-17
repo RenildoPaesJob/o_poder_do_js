@@ -12,7 +12,7 @@ export const Order = model("Order", new Schema({
 	},
 	createAt: {
 		type: Date,
-		required: Date.now
+		default: Date.now
 	},
 	products: {
 		required: true,
