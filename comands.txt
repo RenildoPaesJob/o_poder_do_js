@@ -1,0 +1,17 @@
+criar um app
+yarn create expo-app app -t expo-template-blank-typescript
+
+install styled-components
+yarn add styled-components
+
+install types do styled-components
+yarn add -D @types/styled-components @types/styled-components-react-native
+
+para usar svgs deve-se executar o seguinte comando
+yarn expo install react-native-svg
+
+permissao para usar fontes customizadas externas
+yarn expo install expo-font
+
+o RN para android não tem o INTL, para instalar
+yarn add intl
