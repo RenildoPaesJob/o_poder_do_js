@@ -29,6 +29,7 @@ export function Header ({selectTable, onCancelOrder} : HeaderProps) {
 						</TouchableOpacity>
 					</OrderHeader>
 
+					{/* MESA */}
 					<Table>
 						<Text color="#666">
 							Mesa {selectTable}

@@ -20,11 +20,20 @@ interface ProductModalProps {
 	visible: boolean;
 	onClose: () => void;
 	product: null | Product;
+	onAddToCart: (product: Product) => void;
 }
 
-export function PorductModal({ visible, onClose, product }: ProductModalProps) {
+export function PorductModal({ visible, onClose, product, onAddToCart }: ProductModalProps) {
 	if (!product) {
 		return null;
+	}
+
+	function handleAddToCart() {
+		// a exclamation "!" diz para o typescript que apesar dessse argumeto
+		// aceita NULL, quando ele passar por aqui sempre vai vim diferente de NULL
+		// pelo o fato do if(!product) acima ja esta tratando isso nesta function
+		onAddToCart(product!)
+		onClose()
 	}
 
 	return (
@@ -36,7 +45,7 @@ export function PorductModal({ visible, onClose, product }: ProductModalProps) {
 		>
 			<Image
 				source={{
-					uri: `http://192.168.1.16:3001/uploads/${product.imagePath}`,
+					uri: `http://192.168.1.16:3001/uploads/${product?.imagePath}`,
 				}}
 			>
 				<CloseButton onPress={onClose}>
@@ -87,7 +96,7 @@ export function PorductModal({ visible, onClose, product }: ProductModalProps) {
 						</Text>
 					</PriceContainer>
 
-					<Button onPress={() => alert('adicionar ao pedido')}>
+					<Button onPress={handleAddToCart}>
 						Adicionar ao pedido
 					</Button>
 				</FooterContainer>
