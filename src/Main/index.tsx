@@ -113,6 +113,7 @@ export function Main() {
 
 				{isLoading && (
 					<CenteredContainer>
+						{/* load page */}
 						<ActivityIndicator color="#d73035" size={"large"}/>
 					</CenteredContainer>
 				)}
