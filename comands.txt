@@ -1,0 +1,18 @@
+create project
+yarn create vite
+
+install depencies
+yarn
+
+run project
+yarn dev
+
+install styled-components and types
+yarn add styled-components
+yarn add -D @types/styled-components
+
+install toast
+yarn add react-toastify
+
+para receber a conexao socket.io do back para o front
+yarn add socket.io-client
