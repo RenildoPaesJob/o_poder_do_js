@@ -34,3 +34,6 @@ yarn add mongoose
 para manipulacao de arquivos em rotas
 yarn add multer
 yarn add -D @types/multer
+
+install dependecies para fazer a conexao do web socket
+yarn add socket.io
