@@ -1,14 +1,16 @@
-import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import illustrationImg from '../assets/images/illustration.svg'
-import logoImg from '../assets/images/logo.svg'
-import googleIconImg from '../assets/images/google-icon.svg'
+import { signInWithPopup } from 'firebase/auth'
+import { auth, googleProvider } from '../services/firebase'
+
 import { Button } from '../components/Button'
 
+import logoImg from '../assets/images/logo.svg'
+import illustrationImg from '../assets/images/illustration.svg'
+import googleIconImg from '../assets/images/google-icon.svg'
+
 import '../styles/auth.scss'
-import { auth, googleProvider } from '../services/firebase'
-import { signInWithPopup } from 'firebase/auth'
+import '../styles/auth.scss'
 
 export function Home() {
 	const navigate = useNavigate()
