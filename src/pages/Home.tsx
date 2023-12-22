@@ -1,11 +1,27 @@
+import { useState, useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import illustrationImg from '../assets/images/illustration.svg'
 import logoImg from '../assets/images/logo.svg'
 import googleIconImg from '../assets/images/google-icon.svg'
 import { Button } from '../components/Button'
 
 import '../styles/auth.scss'
+import { auth, googleProvider } from '../services/firebase'
+import { signInWithPopup } from 'firebase/auth'
+import { UserVerify } from '../App'
 
 export function Home() {
+	const navigate = useNavigate()
+
+	const handleCreateRoom = () => {
+		const provider = googleProvider
+		signInWithPopup(auth, provider)
+			.then(result => {
+				navigate("/new-room", { replace: true })
+			})
+	}
+
 	return (
 		<div id='page-atuh'>
 			<aside>
@@ -16,7 +32,7 @@ export function Home() {
 			<main>
 				<div className='main-content'>
 					<img src={logoImg} alt="Letmeask" />
-					<button className='create-room'>
+					<button className='create-room' onClick={handleCreateRoom}>
 						<img src={googleIconImg} alt="Icon Google" />
 						Crie sua sala com o Google
 					</button>
