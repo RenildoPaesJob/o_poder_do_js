@@ -9,7 +9,6 @@ import { Button } from '../components/Button'
 import '../styles/auth.scss'
 import { auth, googleProvider } from '../services/firebase'
 import { signInWithPopup } from 'firebase/auth'
-import { UserVerify } from '../App'
 
 export function Home() {
 	const navigate = useNavigate()
